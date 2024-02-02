@@ -21,4 +21,5 @@ message GetPersonRequest {
 message GetPersonResponse {
   Person person = 1;
   string message = 2;
+  string retcode = 3;
 }
