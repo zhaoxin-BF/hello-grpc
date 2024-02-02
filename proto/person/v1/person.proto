@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package person.v1;
+option go_package ="grpc_hello/golang/person/v1;person";
+
+message Person {
+  string name = 1;
+  int32 age = 2;
+  optional string password = 3;
+  repeated string hobbies = 4;
+}
+
+service PersonService {
+  rpc GetPerson(GetPersonRequest) returns (GetPersonResponse){}
+}
+
+message GetPersonRequest {
+  string person_name = 1;
+}
+
+message GetPersonResponse {
+  Person person = 1;
+  string message = 2;
+}

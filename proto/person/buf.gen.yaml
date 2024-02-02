@@ -1,0 +1,25 @@
+version: v1
+plugins:
+  - plugin: buf.build/protocolbuffers/go
+    out: ../golang
+    opt:
+      - paths=source_relative
+  - plugin: buf.build/grpc/go
+    out: ../golang
+    opt:
+      - paths=source_relative
+  - plugin: buf.build/grpc-ecosystem/gateway
+    out: ../golang
+    opt:
+      - paths=source_relative
+  - plugin: buf.build/bufbuild/validate-go
+    out: ../golang
+    opt:
+      - paths=source_relative
+  - plugin: buf.build/grpc-ecosystem/openapiv2
+    out: ../doc
+    opt:
+      - use_go_templates=true
+      - disable_default_errors=true
+      - allow_merge=true
+      - merge_file_name=person
