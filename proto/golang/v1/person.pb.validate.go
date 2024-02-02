@@ -296,6 +296,8 @@ func (m *GetPersonResponse) validate(all bool) error {
 
 	// no validation rules for Message
 
+	// no validation rules for Retcode
+
 	if len(errors) > 0 {
 		return GetPersonResponseMultiError(errors)
 	}
