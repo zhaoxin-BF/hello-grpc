@@ -3,6 +3,11 @@ syntax = "proto3";
 package person.v1;
 option go_package ="grpc_hello/golang/person/v1;person";
 
+//import "google/api/annotations.proto";
+//import "google/api/field_behavior.proto";
+//import "protoc-gen-openapiv2/options/annotations.proto";
+//import "validate/validate.proto";
+
 message Person {
   string name = 1;
   int32 age = 2;
